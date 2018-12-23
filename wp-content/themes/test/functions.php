@@ -32,7 +32,7 @@ function delete_width_height($image, $attachment_id, $size, $icon){
 }
 
 /** Регистрация бокового sidebar */
-function true_register_wp_sidebars() {
+function true_register_wp_sidebar() {
 
 	/* В боковой колонке */
 	register_sidebar(
@@ -48,4 +48,4 @@ function true_register_wp_sidebars() {
 	);
 }
 
-add_action( 'widgets_init', 'true_register_wp_sidebars' ); // Хук widgets_init обязателен!
+add_action( 'widgets_init', 'true_register_wp_sidebar' ); // Хук widgets_init обязателен!
