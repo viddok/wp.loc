@@ -9,7 +9,9 @@
         echo '<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">';
     endif; ?>
     <div class="card-body">
-        <h2 class="card-title"><?php the_title() ?></h2>
+        <a href="#" style="color: #1d2124; :hover">
+            <h2 class="card-title"><?php the_title() ?></h2>
+        </a>
         <?php the_excerpt() ?>
     </div>
     <div class="card-footer text-muted">
