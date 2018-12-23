@@ -1,0 +1,26 @@
+/*
+Theme Name: Тестовая тема
+Version: 0.1
+Description: Тема для тренировок
+Author: Евгений Родкин
+Author URI: http://wp.loc
+*/
+
+.fixed-top {
+    top: 30px;
+}
+
+.nav-item a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgba(255,255,255,.5);
+}
+
+.nav-item a:hover, .nav-item a:focus {
+    text-decoration: none;
+    color: rgba(255,255,255,.75);
+}
+
+.nav-item.current-menu-item a {
+    color: #fff;
+}
