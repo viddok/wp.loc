@@ -37,10 +37,16 @@
 			<!-- Pagination -->
 			<ul class="pagination justify-content-center mb-4">
 				<li class="page-item">
-						<?php previous_post_link('%link', '&larr; Older') ?>
+						<?php
+							$temp_link = get_previous_post_link('%link', '&larr; Older');
+							echo str_replace( '<a ', '<a class="page-link" ', $temp_link );
+						?>
 					</li>
 				<li class="page-item">
-						<?php next_post_link('%link', 'Newer &rarr;'); ?>
+						<?php
+							$temp_link = get_next_post_link('%link', 'Newer &rarr;');
+							echo str_replace( '<a ', '<a class="page-link" ', $temp_link );
+						?>
 					</li>
 			</ul>
 			<!--/Pagination-->
