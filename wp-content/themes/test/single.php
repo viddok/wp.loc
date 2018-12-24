@@ -45,24 +45,53 @@
                 <div class="clr"></div>
             </div>
 
-			<!-- Pagination -->
+			<!-- Pagination posts-->
 			<ul class="pagination justify-content-center mb-4">
 				<li class="page-item">
 						<?php
-							$temp_link = get_previous_post_link('%link', '&larr; Older');
-							echo str_replace( '<a ', '<a class="page-link" ', $temp_link );
+						$temp_link = apply_filters('add_class_from_link', get_previous_post_link('%link', '&larr; Older'));
+						echo $temp_link;
 						?>
 					</li>
 				<li class="page-item">
 						<?php
-							$temp_link = get_next_post_link('%link', 'Newer &rarr;');
-							echo str_replace( '<a ', '<a class="page-link" ', $temp_link );
+						$temp_link = apply_filters('add_class_from_link', get_next_post_link('%link', 'Newer &rarr;'));
+						echo $temp_link;
 						?>
 					</li>
 			</ul>
-			<!--/Pagination-->
+			<!--/Pagination posts-->
 
 			<?php comments_template(); ?>
+
+            <!-- Pagination comments -->
+            <ul class="pagination justify-content-center mb-4">
+				<?php if (!empty(get_next_comments_link())) : ?>
+                    <li class="page-item">
+						<?php
+                        $temp_link = apply_filters('add_class_from_link', get_next_comments_link('&larr; Older'));
+                        echo $temp_link;
+                        ?>
+                    </li>
+				<?php else: ?>
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">&larr; Older</a>
+                    </li>
+				<?php endif; ?>
+				<?php if (!empty(get_previous_comments_link())) : ?>
+                    <li class="page-item">
+						<?php
+						$temp_link = apply_filters('add_class_from_link', get_previous_comments_link('Newer &rarr;'));
+						echo $temp_link;
+						?>
+                    </li>
+				<?php else: ?>
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Newer &rarr;</a>
+                    </li>
+				<?php endif; ?>
+            </ul>
+            <!--/Pagination comments-->
 
         </div>
 

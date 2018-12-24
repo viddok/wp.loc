@@ -70,3 +70,10 @@ function true_target_blank_to_read_more( $more_link, $more_link_text ) {
 	global $post;
 	return ' <a href="' . get_permalink() . '#more-' . get_the_id() . '" class="btn btn-primary" target="_blank">Read More →</a>';
 }
+
+/** Добавил класс к ссылкам пагинации */
+function add_class_from_link_function($link) {
+	return str_replace('<a ', '<a class="page-link" ', $link);
+}
+
+add_filter('add_class_from_link', 'add_class_from_link_function');
