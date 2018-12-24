@@ -52,3 +52,18 @@ Author URI: http://wp.loc
 .clr {
     clear: both;
 }
+
+/*.comment, .pingback {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 1.5rem!important;
+}*/
+
+.comment-body {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 1.5rem!important;
+}
+
+.comment .comment-body img {
+    max-width: 100%;
+    height: auto;
+}

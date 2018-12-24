@@ -45,8 +45,6 @@
                 <div class="clr"></div>
             </div>
 
-			<?php get_comment() ?>
-
 			<!-- Pagination -->
 			<ul class="pagination justify-content-center mb-4">
 				<li class="page-item">
@@ -64,7 +62,9 @@
 			</ul>
 			<!--/Pagination-->
 
-		</div>
+			<?php comments_template(); ?>
+
+        </div>
 
 		<?php get_sidebar() ?>
 
