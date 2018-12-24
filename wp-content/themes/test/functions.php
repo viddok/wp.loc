@@ -1,37 +1,18 @@
 <?php
 
+/**
+ * Включение опций темы:
+ */
+
 /** Включаем поддержку меню в теме */
 add_theme_support( 'menus' );
-
-/** Добавил фильтра для присвоения стилей ссылкам пагинации */
-add_filter('next_posts_link_attributes', 'posts_link_attributes');
-add_filter('previous_posts_link_attributes', 'posts_link_attributes');
-
-function posts_link_attributes() {
-	return 'class="page-link"';
-}
 
 /** Включение миниатюр для всех типов записей */
 add_theme_support( 'post-thumbnails' ); // для всех типов постов
 
-function true_auto_linking( $html, $post_id, $post_thumbnail_id, $size, $attr ){
-	return '<a href="' . get_permalink( $post_id ) . '">' . $html . '</a>';
-}
-
-/** Автоматически добавляю ссылку к миниатюре поста */
-add_filter('post_thumbnail_html', 'true_auto_linking', 10, 5);
-
-/** Убираю размеры миниатюр в теге <img> */
-add_filter('wp_get_attachment_image_src','delete_width_height', 100, 4);
-
-function delete_width_height($image, $attachment_id, $size, $icon){
-
-	$image[1] = '';
-	$image[2] = '';
-	return $image;
-}
-
 /** Регистрация бокового sidebar */
+add_action( 'widgets_init', 'true_register_wp_sidebar' ); // Хук widgets_init обязателен!
+
 function true_register_wp_sidebar() {
 
 	/* В боковой колонке */
@@ -48,9 +29,40 @@ function true_register_wp_sidebar() {
 	);
 }
 
-add_action( 'widgets_init', 'true_register_wp_sidebar' ); // Хук widgets_init обязателен!
 
-/** Добавил фильтр для изменения тега "далее" */
+
+/**
+ * Настройка темы:
+ */
+
+/** Добавил фильтра для присвоения стилей ссылкам пагинации */
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+	return 'class="page-link"';
+}
+
+/** Автоматически добавляю ссылку к миниатюре поста */
+add_filter('post_thumbnail_html', 'true_auto_linking', 10, 5);
+
+function true_auto_linking( $html, $post_id, $post_thumbnail_id, $size, $attr ){
+	return '<a href="' . get_permalink( $post_id ) . '">' . $html . '</a>';
+}
+
+/** Убираю размеры миниатюр в теге <img> */
+add_filter('wp_get_attachment_image_src','delete_width_height', 100, 4);
+
+function delete_width_height($image, $attachment_id, $size, $icon){
+
+	$image[1] = '';
+	$image[2] = '';
+	return $image;
+}
+
+/** Добавил фильтр для изменения тега "Далее" */
+add_filter( 'the_content_more_link', 'true_target_blank_to_read_more', 10, 2 );
+
 function true_target_blank_to_read_more( $more_link, $more_link_text ) {
 	// Параметры, передаваемые из фильтра, сейчас мы их не будем использовать
 	// $more_link_text - анкор (текст) ссылки по умолчанию
@@ -58,5 +70,3 @@ function true_target_blank_to_read_more( $more_link, $more_link_text ) {
 	global $post;
 	return ' <a href="' . get_permalink() . '#more-' . get_the_id() . '" class="btn btn-primary" target="_blank">Read More →</a>';
 }
-
-add_filter( 'the_content_more_link', 'true_target_blank_to_read_more', 10, 2 );
