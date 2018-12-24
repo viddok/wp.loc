@@ -24,3 +24,31 @@ Author URI: http://wp.loc
 .nav-item.current-menu-item a {
     color: #fff;
 }
+
+.author-container {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-bottom: 1.5rem!important;
+}
+
+.author-container .author-data-container {
+    float: left;
+    margin-right: 1.25rem;
+    text-align: center;
+}
+
+.author-container .author-data-container .author-name {
+    display: block;
+}
+
+.author-container .author-info {
+}
+
+.clr {
+    clear: both;
+}
