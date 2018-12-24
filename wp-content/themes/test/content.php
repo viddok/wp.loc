@@ -12,7 +12,7 @@
         <a href="<?php echo get_permalink() ?>" style="color: #1d2124; :hover">
             <h2 class="card-title"><?php the_title() ?></h2>
         </a>
-        <?php the_excerpt() ?>
+        <?php the_content() ?>
     </div>
     <div class="card-footer text-muted">
         Posted on <?php echo get_the_date('F j, Y') ?> by

@@ -49,3 +49,14 @@ function true_register_wp_sidebar() {
 }
 
 add_action( 'widgets_init', 'true_register_wp_sidebar' ); // Хук widgets_init обязателен!
+
+/** Добавил фильтр для изменения тега "далее" */
+function true_target_blank_to_read_more( $more_link, $more_link_text ) {
+	// Параметры, передаваемые из фильтра, сейчас мы их не будем использовать
+	// $more_link_text - анкор (текст) ссылки по умолчанию
+	// $more_link - HTML ссылки по умолчанию
+	global $post;
+	return ' <a href="' . get_permalink() . '#more-' . get_the_id() . '" class="btn btn-primary" target="_blank">Read More →</a>';
+}
+
+add_filter( 'the_content_more_link', 'true_target_blank_to_read_more', 10, 2 );
