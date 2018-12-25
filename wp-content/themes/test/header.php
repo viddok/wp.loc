@@ -45,9 +45,8 @@
 			'container_class' => 'collapse navbar-collapse',
 			'container_id'    => 'navbarResponsive',
 			'menu_class'      => 'navbar-nav ml-auto',
-			'menu_id'         => '',
+			'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
 			'walker'=> new True_Walker_Nav_Menu() // этот параметр нужно добавить
-
 		);
 		wp_nav_menu( $args );
 		?>
