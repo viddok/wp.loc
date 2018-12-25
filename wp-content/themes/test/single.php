@@ -65,41 +65,46 @@
 			</ul>
 			<!--/Pagination posts-->
 
-			<?php comments_template(); ?>
+			<?php
+			global $post;
+			if ($post->comment_count > 0) :
+			?>
 
-            <!-- Pagination comments -->
-            <ul class="pagination justify-content-center mb-4">
-				<?php if (!empty(get_next_comments_link())) : ?>
-                    <li class="page-item">
-						<?php
-                        $temp_link = apply_filters('add_class_from_link', get_next_comments_link($button_older));
-                        echo $temp_link;
-                        ?>
-                    </li>
-				<?php else: ?>
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#">
-                            <?php echo $button_older ?>
-                        </a>
-                    </li>
-				<?php endif; ?>
-				<?php if (!empty(get_previous_comments_link())) : ?>
-                    <li class="page-item">
-						<?php
-						$temp_link = apply_filters('add_class_from_link', get_previous_comments_link($button_next));
-						echo $temp_link;
-						?>
-                    </li>
-				<?php else: ?>
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#">
-                        <?php echo $button_next ?>
-                        </a>
-                    </li>
-				<?php endif; ?>
-            </ul>
-            <!--/Pagination comments-->
+                <?php comments_template(); ?>
 
+                <!-- Pagination comments -->
+                <ul class="pagination justify-content-center mb-4">
+                    <?php if (!empty(get_next_comments_link())) : ?>
+                        <li class="page-item">
+                            <?php
+                            $temp_link = apply_filters('add_class_from_link', get_next_comments_link($button_older));
+                            echo $temp_link;
+                            ?>
+                        </li>
+                    <?php else: ?>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">
+                                <?php echo $button_older ?>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if (!empty(get_previous_comments_link())) : ?>
+                        <li class="page-item">
+                            <?php
+                            $temp_link = apply_filters('add_class_from_link', get_previous_comments_link($button_next));
+                            echo $temp_link;
+                            ?>
+                        </li>
+                    <?php else: ?>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">
+                            <?php echo $button_next ?>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+                <!--/Pagination comments-->
+            <?php endif; ?>
         </div>
 
 		<?php get_sidebar() ?>
