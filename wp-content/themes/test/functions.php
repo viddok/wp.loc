@@ -50,6 +50,12 @@ function add_my_scripts(){
 		true);
 }
 
+add_action('after_setup_theme', 'true_load_theme_textdomain');
+
+function true_load_theme_textdomain(){
+	load_theme_textdomain( 'translate', get_template_directory() . '/languages' );
+}
+
 /**
  * Включение опций темы:
  */
