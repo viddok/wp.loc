@@ -19,12 +19,13 @@
 							'class'	=> 'card-img-top'
 						);
 						the_post_thumbnail('large', $attr);
-					else:
-						echo '<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">';
 					endif; ?>
 					<div class="card-footer text-muted">
-						Posted on <?php echo get_the_date('F j, Y') ?> by
-						<?php the_author_posts_link() ?>
+						<?php
+                        $posted = __( 'Posted on', 'translate' ) . ' ' . get_the_date('F j, Y') . ' ' .
+                                  __( 'by', 'translate' ) . ' ' . get_the_author_posts_link();
+                        echo $posted;
+                        ?>
 					</div>
 					<div class="card-body">
 						<?php the_content(); ?>
@@ -49,13 +50,15 @@
 			<ul class="pagination justify-content-center mb-4">
 				<li class="page-item">
 						<?php
-						$temp_link = apply_filters('add_class_from_link', get_previous_post_link('%link', '&larr; Older'));
+						$button_older = '&larr; ' . __( 'Older', 'translate');
+						$temp_link = apply_filters('add_class_from_link', get_previous_post_link('%link', $button_older));
 						echo $temp_link;
 						?>
 					</li>
 				<li class="page-item">
 						<?php
-						$temp_link = apply_filters('add_class_from_link', get_next_post_link('%link', 'Newer &rarr;'));
+						$button_next = __( 'Newer', 'translate') . ' &rarr;';
+						$temp_link = apply_filters('add_class_from_link', get_next_post_link('%link', $button_next));
 						echo $temp_link;
 						?>
 					</li>
@@ -69,25 +72,29 @@
 				<?php if (!empty(get_next_comments_link())) : ?>
                     <li class="page-item">
 						<?php
-                        $temp_link = apply_filters('add_class_from_link', get_next_comments_link('&larr; Older'));
+                        $temp_link = apply_filters('add_class_from_link', get_next_comments_link($button_older));
                         echo $temp_link;
                         ?>
                     </li>
 				<?php else: ?>
                     <li class="page-item disabled">
-                        <a class="page-link" href="#">&larr; Older</a>
+                        <a class="page-link" href="#">
+                            <?php echo $button_older ?>
+                        </a>
                     </li>
 				<?php endif; ?>
 				<?php if (!empty(get_previous_comments_link())) : ?>
                     <li class="page-item">
 						<?php
-						$temp_link = apply_filters('add_class_from_link', get_previous_comments_link('Newer &rarr;'));
+						$temp_link = apply_filters('add_class_from_link', get_previous_comments_link($button_next));
 						echo $temp_link;
 						?>
                     </li>
 				<?php else: ?>
                     <li class="page-item disabled">
-                        <a class="page-link" href="#">Newer &rarr;</a>
+                        <a class="page-link" href="#">
+                        <?php echo $button_next ?>
+                        </a>
                     </li>
 				<?php endif; ?>
             </ul>
