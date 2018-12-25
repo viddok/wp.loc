@@ -6,10 +6,6 @@
 	<!-- /.container -->
 </footer>
 
-<!-- Bootstrap core JavaScript -->
-<script src="<?php bloginfo('template_directory') ?>/vendor/jquery/jquery.min.js"></script>
-<script src="<?php bloginfo('template_directory') ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 <?php wp_footer() ?>
 </body>
 

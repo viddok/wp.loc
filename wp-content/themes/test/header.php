@@ -8,15 +8,6 @@
 
 	<title><?php bloginfo() ?></title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="<?php echo $template_directory_url ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- Custom styles for this template -->
-	<link href="<?php echo $template_directory_url ?>/css/blog-home.css" rel="stylesheet">
-
-	<!--My theme styles-->
-	<link href="<?php echo $template_directory_url ?>/style.css" rel="stylesheet">
-
 	<?php wp_head() ?>
 </head>
 

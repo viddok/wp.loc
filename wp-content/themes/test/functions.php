@@ -1,6 +1,56 @@
 <?php
 
 /**
+ * Подключение стилей и скриптов
+ */
+
+add_action( 'wp_enqueue_scripts', 'add_my_scripts');
+
+function add_my_scripts(){
+
+	/** Styles */
+	wp_enqueue_style(
+		'bootstrap.min',
+		get_stylesheet_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css',
+		false,
+		null);
+
+	wp_enqueue_style(
+		'blog-home',
+		get_stylesheet_directory_uri() . '/css/blog-home.css',
+		false,
+		null);
+
+	wp_enqueue_style(
+		'style',
+		get_stylesheet_directory_uri() . '/style.css',
+		false,
+		null);
+
+	wp_enqueue_style(
+		'style',
+		get_stylesheet_directory_uri() . '/style.css',
+		false,
+		null);
+
+	/** Scripts */
+
+	wp_enqueue_script(
+		'jquery.min',
+		get_stylesheet_directory_uri() . '/vendor/jquery/jquery.min.js',
+		false,
+		null,
+		true);
+
+	wp_enqueue_script(
+		'bootstrap.bundle.min',
+		get_stylesheet_directory_uri() . 'vendor/bootstrap/js/bootstrap.bundle.min.js',
+		false,
+		null,
+		true);
+}
+
+/**
  * Включение опций темы:
  */
 
