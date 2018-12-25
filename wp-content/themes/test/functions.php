@@ -50,6 +50,7 @@ function add_my_scripts(){
 		true);
 }
 
+/** Включил перевод темы */
 add_action('after_setup_theme', 'true_load_theme_textdomain');
 
 function true_load_theme_textdomain(){
