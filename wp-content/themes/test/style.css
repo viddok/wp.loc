@@ -11,7 +11,7 @@ Author URI: http://wp.loc
     top: 30px;
 }
 
-.nav-item a {
+/*.nav-item a {
     display: block;
     padding: 0.5rem 1rem;
     color: rgba(255,255,255,.5);
@@ -24,7 +24,7 @@ Author URI: http://wp.loc
 
 .nav-item.current-menu-item a {
     color: #fff;
-}
+}*/
 
 .author-container {
     flex: 1 1 auto;

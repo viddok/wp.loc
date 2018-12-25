@@ -143,7 +143,7 @@ class True_Walker_Nav_Menu extends Walker_Nav_Menu {
 	/*
 	 * Позволяет перезаписать <ul class="sub-menu">
 	 */
-	function start_lvl(&$output, $depth) {
+	function start_lvl(&$output, $depth = 0, $args = Array()) {
 		/*
 		 * $depth – уровень вложенности, например 2,3 и т д
 		 */
@@ -158,7 +158,7 @@ class True_Walker_Nav_Menu extends Walker_Nav_Menu {
 	 * @param int $depth Уровень вложенности элемента меню.
 	 * @param object $args Параметры функции wp_nav_menu
 	 */
-	function start_el(&$output, $item, $depth, $args) {
+	function start_el(&$output, $item, $depth = 0, $args = Array(), $id = 0) {
 		global $wp_query;
 		/*
 		 * Некоторые из параметров объекта $item
