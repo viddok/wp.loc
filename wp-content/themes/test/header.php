@@ -21,7 +21,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<?php
-		wp_nav_menu( array(
+		/*wp_nav_menu( array(
 			'theme_location'  => 'Main-menu',
 			'menu'            => '',
 			'container'       => 'div',
@@ -38,7 +38,18 @@
 			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 			'depth'           => 0,
 			'walker'          => '',
-		) );
+		) );*/
+		$args = array(
+			'theme_location' => 'Main-menu',
+			'container'       => 'div',
+			'container_class' => 'collapse navbar-collapse',
+			'container_id'    => 'navbarResponsive',
+			'menu_class'      => 'navbar-nav ml-auto',
+			'menu_id'         => '',
+			'walker'=> new True_Walker_Nav_Menu() // этот параметр нужно добавить
+
+		);
+		wp_nav_menu( $args );
 		?>
 	</div>
 </nav>
