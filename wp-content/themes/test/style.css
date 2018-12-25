@@ -6,7 +6,8 @@ Author: Евгений Родкин
 Author URI: http://wp.loc
 */
 
-.fixed-top {
+/* Убрал перекрытие плавающего меня админбаром */
+.admin-bar .fixed-top {
     top: 30px;
 }
 
