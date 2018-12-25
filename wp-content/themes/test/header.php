@@ -22,8 +22,8 @@
 		</button>
 		<?php
 		wp_nav_menu( array(
-			'theme_location'  => '',
-			'menu'            => 'Main menu',
+			'theme_location'  => 'Main-menu',
+			'menu'            => '',
 			'container'       => 'div',
 			'container_class' => 'collapse navbar-collapse',
 			'container_id'    => 'navbarResponsive',

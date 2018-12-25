@@ -62,7 +62,11 @@ function true_load_theme_textdomain(){
  */
 
 /** Включаем поддержку меню в теме */
-add_theme_support( 'menus' );
+register_nav_menus(
+	array(
+		'Main-menu' => 'Главное меню',
+	)
+);
 
 /** Включение миниатюр для всех типов записей */
 add_theme_support( 'post-thumbnails' ); // для всех типов постов
