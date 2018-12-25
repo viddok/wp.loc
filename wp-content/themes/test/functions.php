@@ -191,15 +191,12 @@ class True_Walker_Nav_Menu extends Walker_Nav_Menu {
 		 * Генерируем строку с CSS-классами элемента меню
 		 */
 		$class_names = $value = '';
-		//$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		//$classes[] = 'menu-item-' . $item->ID;
-
-
 		$classes[] = 'nav-item';
 		$classes1 = empty( $item->classes ) ? array() : (array) $item->classes;
 		foreach ($classes1 as $val) {
 			if ($val === 'current-menu-item') {
 				$classes[] = 'active';
+				break;
 			}
 		}
 
@@ -208,15 +205,8 @@ class True_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$class_names = ' class="' . esc_attr( $class_names ) . '"';
 
 		/*
-		 * Генерируем ID элемента
-		 */
-		//$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
-		//$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
-
-		/*
 		 * Генерируем элемент меню
 		 */
-		//$output .= $indent . '<li' . $id . $value . $class_names .'>';
 		$output .= $indent . '<li' . $value . $class_names .'>';
 
 		// атрибуты элемента, title="", rel="", target="" и href=""
