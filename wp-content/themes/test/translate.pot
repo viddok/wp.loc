@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: test-translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-25 19:46+0000\n"
+"POT-Creation-Date: 2018-12-26 05:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,28 +15,20 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.0.2"
 
-#: content.php:20 single.php:26
-msgid "by"
-msgstr ""
-
-#: searchform.php:10
-msgid "Go!"
-msgstr ""
-
-#. Author URI of the theme
-msgid "http://wp.loc"
+#: index.php:29 single.php:53
+msgid "Older"
 msgstr ""
 
 #: index.php:42 single.php:60
 msgid "Newer"
 msgstr ""
 
-#: index.php:29 single.php:53
-msgid "Older"
-msgstr ""
-
 #: content.php:19 single.php:25
 msgid "Posted on"
+msgstr ""
+
+#: content.php:20 single.php:26
+msgid "by"
 msgstr ""
 
 #: searchform.php:3
@@ -47,14 +39,38 @@ msgstr ""
 msgid "Search for ..."
 msgstr ""
 
-#. Author of the theme
-msgid "Евгений Родкин"
+#: searchform.php:10
+msgid "Go!"
+msgstr ""
+
+#: functions.php:76
+msgid "Main menu"
+msgstr ""
+
+#: functions.php:92
+msgid "Side column"
+msgstr ""
+
+#: functions.php:93
+msgid "Drag widgets here to add them to the sidebar."
+msgstr ""
+
+#: functions.php:141
+msgid "Read More"
+msgstr ""
+
+#. Name of the theme
+msgid "Тестовая тема"
 msgstr ""
 
 #. Description of the theme
 msgid "Тема для тренировок"
 msgstr ""
 
-#. Name of the theme
-msgid "Тестовая тема"
+#. Author of the theme
+msgid "Евгений Родкин"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://wp.loc"
 msgstr ""

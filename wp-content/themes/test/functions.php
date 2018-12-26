@@ -73,7 +73,7 @@ function true_localize_theme( $locale ) {
 /** Включаем поддержку меню в теме */
 register_nav_menus(
 	array(
-		'Main-menu' => 'Главное меню',
+		'Main-menu' => __( 'Main menu', 'translate' )
 	)
 );
 
@@ -89,8 +89,8 @@ function true_register_wp_sidebar() {
 	register_sidebar(
 		array(
 			'id' => 'true_side', // уникальный id
-			'name' => 'Боковая колонка', // название сайдбара
-			'description' => 'Перетащите сюда виджеты, чтобы добавить их в сайдбар.', // описание
+			'name' => __( 'Side column', 'translate' ), // название сайдбара
+			'description' => __( 'Drag widgets here to add them to the sidebar.', 'translate' ), // описание
 			'before_widget' => '<div id="%1$s" class="card my-4 %2$s">', // по умолчанию виджеты выводятся <li>-списком
 			'after_widget' => '</div>',
 			'before_title' => '<h5 class="card-header">', // по умолчанию заголовки виджетов в <h2>
@@ -116,14 +116,14 @@ function posts_link_attributes() {
 /** Автоматически добавляю ссылку к миниатюре поста */
 add_filter('post_thumbnail_html', 'true_auto_linking', 10, 5);
 
-function true_auto_linking( $html, $post_id, $post_thumbnail_id, $size, $attr ){
+function true_auto_linking( $html, $post_id ){
 	return '<a href="' . get_permalink( $post_id ) . '">' . $html . '</a>';
 }
 
 /** Убираю размеры миниатюр в теге <img> */
 add_filter('wp_get_attachment_image_src','delete_width_height', 100, 4);
 
-function delete_width_height($image, $attachment_id, $size, $icon){
+function delete_width_height($image){
 
 	$image[1] = '';
 	$image[2] = '';
@@ -133,12 +133,12 @@ function delete_width_height($image, $attachment_id, $size, $icon){
 /** Добавил фильтр для изменения тега "Далее" */
 add_filter( 'the_content_more_link', 'true_target_blank_to_read_more', 10, 2 );
 
-function true_target_blank_to_read_more( $more_link, $more_link_text ) {
+function true_target_blank_to_read_more(  ) {
 	// Параметры, передаваемые из фильтра, сейчас мы их не будем использовать
 	// $more_link_text - анкор (текст) ссылки по умолчанию
 	// $more_link - HTML ссылки по умолчанию
 	global $post;
-	return ' <a href="' . get_permalink() . '#more-' . get_the_id() . '" class="btn btn-primary" target="_blank">Read More →</a>';
+	return ' <a href="' . get_permalink() . '#more-' . get_the_id() . '" class="btn btn-primary" target="_blank">' . __( 'Read More', 'translate' ) . ' →</a>';
 }
 
 /** Добавил класс к ссылкам пагинации */

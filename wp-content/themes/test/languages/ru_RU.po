@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: test-translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-25 19:46+0000\n"
-"PO-Revision-Date: 2018-12-25 19:51+0000\n"
+"POT-Creation-Date: 2018-12-26 05:29+0000\n"
+"PO-Revision-Date: 2018-12-26 05:30+0000\n"
 "Last-Translator: Евгений Родкин <djalximik@gmail.com>\n"
 "Language-Team: Русский\n"
-"Language: ru-RU\n"
+"Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -15,29 +15,21 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.0.2"
 
-#: content.php:20 single.php:26
-msgid "by"
-msgstr "Автором"
-
-#: searchform.php:10
-msgid "Go!"
-msgstr "Искать"
-
-#. Author URI of the theme
-msgid "http://wp.loc"
-msgstr ""
+#: index.php:29 single.php:53
+msgid "Older"
+msgstr "Старее"
 
 #: index.php:42 single.php:60
 msgid "Newer"
 msgstr "Новее"
 
-#: index.php:29 single.php:53
-msgid "Older"
-msgstr "Старее"
-
 #: content.php:19 single.php:25
 msgid "Posted on"
 msgstr "Опубликовано"
+
+#: content.php:20 single.php:26
+msgid "by"
+msgstr "Автором"
 
 #: searchform.php:3
 msgid "Search"
@@ -47,14 +39,38 @@ msgstr "Поиск"
 msgid "Search for ..."
 msgstr "Искать на сайте..."
 
-#. Author of the theme
-msgid "Евгений Родкин"
+#: searchform.php:10
+msgid "Go!"
+msgstr "Искать"
+
+#: functions.php:76
+msgid "Main menu"
+msgstr "Главное меню"
+
+#: functions.php:92
+msgid "Side column"
+msgstr "Боковая колонка"
+
+#: functions.php:93
+msgid "Drag widgets here to add them to the sidebar."
+msgstr "Перетащите сюда виджеты, чтобы добавить их в сайдбар."
+
+#: functions.php:141
+msgid "Read More"
+msgstr "Читать далее"
+
+#. Name of the theme
+msgid "Тестовая тема"
 msgstr ""
 
 #. Description of the theme
 msgid "Тема для тренировок"
 msgstr ""
 
-#. Name of the theme
-msgid "Тестовая тема"
+#. Author of the theme
+msgid "Евгений Родкин"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://wp.loc"
 msgstr ""
