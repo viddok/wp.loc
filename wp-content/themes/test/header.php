@@ -28,6 +28,7 @@
 			'container_id'    => 'navbarResponsive',
 			'menu_class'      => 'navbar-nav ml-auto',
 			'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+			'depth'             => 1,
 			'walker'=> new WalkerMainMenu() // этот параметр нужно добавить
 		);
 		wp_nav_menu( $args );
