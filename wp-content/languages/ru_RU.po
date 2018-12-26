@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.0.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-12-25 11:31:54+0000\n"
+"PO-Revision-Date: 2018-12-26 03:25:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -679,10 +679,6 @@ msgstr "Добавьте изображение для визуального у
 msgid "Display a list of your most recent comments."
 msgstr "Покажите список самых свежих комментариев."
 
-#: wp-includes/js/dist/block-library.js:10108
-msgid "Create a bulleted or numbered list."
-msgstr "Создайте маркированый или нумерованый список."
-
 #: wp-includes/js/dist/block-library.js:9262
 msgid "Media & Text Settings"
 msgstr "Настройки мультимедиа и текста"
@@ -710,6 +706,10 @@ msgstr "Показывать медиа-содержимое слева"
 #: wp-includes/js/dist/block-library.js:9368
 msgid "Set media and words side-by-side for a richer layout."
 msgstr "Установите мультимедиа элемент и обтекание его текстом по бокам для роскошного макета."
+
+#: wp-includes/js/dist/block-library.js:10108
+msgid "Create a bulleted or numbered list."
+msgstr "Создайте маркированный или нумерованный список."
 
 #: wp-includes/js/dist/block-library.js:4019
 msgid "Text Alignment"
@@ -2825,7 +2825,7 @@ msgstr "Извините, вам не разрешено чтение блоко
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-themes-controller.php:171
 msgid "Whether the theme supports responsive embedded content."
-msgstr "Поддержка темой адаптивного внедрямого содержимого."
+msgstr "Поддержка темой адаптивного вставляемого содержимого."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php:246
 msgid "Invalid parent post ID."
@@ -3307,7 +3307,7 @@ msgstr ""
 "\n"
 "     ###DESCRIPTION###\n"
 "\n"
-"Чтобы подтвердить запрос, пожалуйста нажмите на следующую ссылку:\n"
+"Для подтверждения этого запроса нажмите на следующую ссылку:\n"
 "###CONFIRM_URL###\n"
 "\n"
 "Вы можете проигнорировать и удалить это сообщение,\n"
@@ -3474,7 +3474,7 @@ msgstr "%1$s не является правильным свойством об�
 #. translators: %s: URL to Add Themes admin screen
 #: wp-includes/script-loader.php:1338
 msgid "You won&#8217;t be able to install new themes from here yet since your install requires SFTP credentials. For now, please <a href=\"%s\">add themes in the admin</a>."
-msgstr "Вы не сможете устанавливать новые темы отсюда, так как ваша установка требует ввода данных для SFTP входа. Пожалуйста воспользуйтесь <a href=\"%s\">добавлением тем через консоль</a>."
+msgstr "Вы не сможете устанавливать новые темы отсюда, так как ваша установка требует ввода данных для SFTP входа. Вы можете <a href=\"%s\">добавить тему через консоль</a>."
 
 #. translators: Tab heading when selecting from the most used terms
 #: wp-includes/taxonomy.php:533
@@ -3495,7 +3495,7 @@ msgstr "Нажмите &#8220;Далее&#8221;, чтобы начать доб�
 #. translators: %s: a list of valid video file extensions
 #: wp-includes/widgets/class-wp-widget-media-video.php:44
 msgid "Sorry, we can&#8217;t load the video at the supplied URL. Please check that the URL is for a supported video file (%s) or stream (e.g. YouTube and Vimeo)."
-msgstr "К сожалению, не получилось загрузить видео по указанному URL. Пожалуйста проверьте что URL указывает на поддерживаемый видео файл (%s) или поток (например YouTube или Vimeo)."
+msgstr "К сожалению, не получилось загрузить видео по указанному URL. Убедитесь, что URL указывает на поддерживаемый видео файл (%s) или поток (например YouTube или Vimeo)."
 
 #: wp-includes/script-loader.php:1438
 msgctxt "post action/button label"
@@ -3561,14 +3561,14 @@ msgstr "Набор изменений не найден для перехват�
 msgid "%s is already customizing this site. Do you want to take over?"
 msgstr "Пользователь %s уже настраивает этот сайт. Вы хотите перехватить?"
 
-#. translators: %s: User who is customizing the changeset in customizer.
-#: wp-includes/class-wp-customize-manager.php:3975
-msgid "%s is already customizing this site. Please wait until they are done to try customizing. Your latest changes have been autosaved."
-msgstr "Пользователь %s уже настраивает этот сайт. Пожалуйста подождите пока он закончит. Ваши последние изменения были автоматически сохранены."
-
 #: wp-includes/class-wp-customize-manager.php:3228
 msgid "Sorry, you are not allowed to take over."
 msgstr "Извините, вам не разрешается перехватить."
+
+#. translators: %s: User who is customizing the changeset in customizer.
+#: wp-includes/class-wp-customize-manager.php:3975
+msgid "%s is already customizing this site. Please wait until they are done to try customizing. Your latest changes have been autosaved."
+msgstr "Пользователь %s уже настраивает этот сайт. Пожалуйста, подождите пока он закончит. Ваши последние изменения были автоматически сохранены."
 
 #: wp-includes/customize/class-wp-customize-nav-menu-locations-control.php:46
 msgctxt "menu locations"
@@ -4073,10 +4073,6 @@ msgstr "Пропустить через %1 секунд"
 msgid "Live Broadcast"
 msgstr "Прямая трансляция"
 
-#: wp-includes/script-loader.php:1098
-msgid "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https://get.adobe.com/flashplayer/"
-msgstr "Flash player плагин был отключен или не был установлен в вашем браузере. Пожалуйста включите плагин Flash player или скачайте последнюю версию с https://get.adobe.com/flashplayer/"
-
 #: wp-includes/script-loader.php:1104
 msgid "Toggle Loop"
 msgstr "Включить/выключить зацикливание"
@@ -4092,6 +4088,10 @@ msgstr "Главы"
 #: wp-includes/script-loader.php:1125
 msgid "Speed Rate"
 msgstr "Скорость"
+
+#: wp-includes/script-loader.php:1098
+msgid "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https://get.adobe.com/flashplayer/"
+msgstr "Flash player плагин был отключен или не был установлен в вашем браузере. Пожалуйста, включите плагин Flash player или скачайте последнюю версию с https://get.adobe.com/flashplayer/"
 
 #. translators: %s: Post custom field name
 #: wp-includes/post-template.php:1039
@@ -4127,12 +4127,6 @@ msgstr "ответ oEmbed"
 msgid "Method '%s' must be overridden."
 msgstr "Метод '%s' должен быть переопределен."
 
-#. translators: Network admin email change notification email subject. %s:
-#. Network title
-#: wp-includes/ms-functions.php:2704
-msgid "[%s] Notice of Network Admin Email Change"
-msgstr "[%s] Уведомление о смене адреса email для администратора сети"
-
 #. translators: Do not translate OLD_EMAIL, NEW_EMAIL, SITENAME, SITEURL: those
 #. are placeholders.
 #: wp-includes/ms-functions.php:2689
@@ -4161,6 +4155,12 @@ msgstr ""
 "Успехов,\n"
 "Команда сайта ###SITENAME###\n"
 "###SITEURL###"
+
+#. translators: Network admin email change notification email subject. %s:
+#. Network title
+#: wp-includes/ms-functions.php:2704
+msgid "[%s] Notice of Network Admin Email Change"
+msgstr "[%s] Уведомление о смене адреса email для администратора сети"
 
 #: wp-includes/ms-functions.php:2647
 msgid "[%s] New Network Admin Email Address"
@@ -4192,7 +4192,7 @@ msgstr ""
 "Вы недавно запросили смену адреса электронной почты\n"
 "администратора сети.\n"
 "\n"
-"Если это на самом деле так, пожалуйста нажмите на ссылку ниже чтобы изменить его:\n"
+"Если это на самом деле так, пожалуйста, нажмите на ссылку ниже, чтобы изменить его:\n"
 "###ADMIN_URL###\n"
 "\n"
 "Вы можете проигнорировать и удалить это сообщение, чтобы\n"
@@ -4335,11 +4335,6 @@ msgstr "Новое меню"
 msgid "Create New Menu"
 msgstr "Создать новое меню"
 
-#. translators: %s: Template
-#: wp-includes/class-wp-theme.php:256
-msgid "The theme defines itself as its parent theme. Please check the %s header."
-msgstr "Тема определяет себя как родительскую для себя же. Пожалуйста проверьте заголовок %s."
-
 #: wp-includes/class-wp-user.php:716
 msgid "Usage of user levels is deprecated. Use capabilities instead."
 msgstr "Использование уровней для пользователей устарело. Используйте возможности."
@@ -4399,6 +4394,11 @@ msgstr "Часовой пояс - %s."
 #: wp-includes/class-wp-customize-nav-menus.php:600
 msgid "If your theme has widget areas, you can also add menus there. Visit the <a href=\"%s\">Widgets panel</a> and add a &#8220;Navigation Menu widget&#8221; to display a menu in a sidebar or footer."
 msgstr "Если используемая тема имеет области виджетов, то вы можете также добавить туда меню. Зайдите на <a href=\"%s\">панель управления виджетами</a> и добавьте &#8220;Виджет меню навигации&#8221;, чтобы отображать меню на боковой панели или в подвале."
+
+#. translators: %s: Template
+#: wp-includes/class-wp-theme.php:256
+msgid "The theme defines itself as its parent theme. Please check the %s header."
+msgstr "Тема определяет себя как родительскую для себя же. Пожалуйста, проверьте заголовок %s."
 
 #: wp-includes/class-wp-customize-manager.php:5318
 msgid "CSS code"
@@ -4492,10 +4492,6 @@ msgstr "Изменения удалены в корзину."
 msgid "You must supply a future date to schedule."
 msgstr "Вы должны указать дату в будущем для планирования."
 
-#: wp-includes/class-wp-customize-manager.php:3004
-msgid "There was an authentication problem. Please reload and try again."
-msgstr "Возникла проблема с авторизацией. Пожалуйста перезагрузите и попробуйте снова."
-
 #: wp-includes/class-wp-customize-manager.php:3012
 msgid "No changes saved yet, so there is nothing to trash."
 msgstr "Никаких изменений не было сохранено, поэтому нечего удалять."
@@ -4535,6 +4531,10 @@ msgstr[2] "Невозможно сохранить из-за %s неверных
 msgid "Publish Settings"
 msgstr "Настройки публикации"
 
+#: wp-includes/class-wp-customize-manager.php:3004
+msgid "There was an authentication problem. Please reload and try again."
+msgstr "Возникла проблема с авторизацией. Пожалуйста, перезагрузите и попробуйте снова."
+
 #: wp-includes/admin-bar.php:668
 msgid "View User"
 msgstr "Просмотр пользователя"
@@ -4545,7 +4545,7 @@ msgstr "Редактировать пользователя"
 
 #: wp-includes/class-wp-customize-manager.php:2570
 msgid "The previous set of changes has already been published. Please try saving your current set of changes again."
-msgstr "Предыдущий набор изменений уже был опубликован. Пожалуйста попробуйте снова сохранить ваш текущий набор изменений."
+msgstr "Предыдущий набор изменений уже был опубликован. Пожалуйста, попробуйте снова сохранить ваш текущий набор изменений."
 
 #: wp-includes/widgets/class-wp-widget-text.php:481
 msgid "This widget may have contained code that may work better in the &#8220;Custom HTML&#8221; widget. If you haven&#8217;t yet, how about trying that widget instead?"
@@ -5765,7 +5765,7 @@ msgstr "Подпись для вложения, как она существуе
 
 #: wp-includes/class-wp-customize-manager.php:5665
 msgid "Please enter a valid YouTube URL."
-msgstr "Пожалуйста введите правильный URL YouTube."
+msgstr "Пожалуйста, введите правильный URL YouTube."
 
 #: wp-includes/script-loader.php:819
 msgid "Expand Main menu"

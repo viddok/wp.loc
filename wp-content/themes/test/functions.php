@@ -57,6 +57,15 @@ function true_load_theme_textdomain(){
 	load_theme_textdomain( 'translate', get_template_directory() . '/languages' );
 }
 
+add_filter( 'locale', 'true_localize_theme' );
+
+function true_localize_theme( $locale ) {
+	if ( isset( $_GET['lang'] ) ) {
+		return esc_attr( $_GET['lang'] );
+	}
+	return $locale;
+}
+
 /**
  * Включение опций темы:
  */
