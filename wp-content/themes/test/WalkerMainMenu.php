@@ -1,26 +1,27 @@
 <?php
 
 class WalkerMainMenu extends Walker_Nav_Menu {
-/*
-* Позволяет перезаписать <ul class="sub-menu">
-	*/
-	function start_lvl(&$output, $depth = 0, $args = Array()) {
 	/*
-	* $depth – уровень вложенности, например 2,3 и т д
-	*/
-	$output .= '<ul class="menu_sublist">';
-		}
-		/**
-		* @see Walker::start_el()
-		* @since 3.0.0
-		*
-		* @param string $output
-		* @param object $item Объект элемента меню, подробнее ниже.
-		* @param int $depth Уровень вложенности элемента меню.
-		* @param object $args Параметры функции wp_nav_menu
+	* Позволяет перезаписать <ul class="sub-menu">
 		*/
-		function start_el(&$output, $item, $depth = 0, $args = Array(), $id = 0) {
-		global $wp_query;
+	function start_lvl( &$output, $depth = 0, $args = Array() ) {
+		/*
+		* $depth – уровень вложенности, например 2,3 и т д
+		*/
+		$output .= '<ul class="menu_sublist">';
+	}
+
+	/**
+	 * @see Walker::start_el()
+	 * @since 3.0.0
+	 *
+	 * @param string $output
+	 * @param object $item Объект элемента меню, подробнее ниже.
+	 * @param int $depth Уровень вложенности элемента меню.
+	 * @param object $args Параметры функции wp_nav_menu
+	 */
+	function start_el( &$output, $item, $depth = 0, $args = Array(), $id = 0 ) {
+		//global $wp_query;
 		/*
 		* Некоторые из параметров объекта $item
 		* ID - ID самого элемента меню, а не объекта на который он ссылается
@@ -51,15 +52,9 @@ class WalkerMainMenu extends Walker_Nav_Menu {
 		/*
 		* Генерируем строку с CSS-классами элемента меню
 		*/
-		$class_names = $value = '';
-		$classes[] = 'nav-item';
-		$classes1 = empty( $item->classes ) ? array() : (array) $item->classes;
-		foreach ($classes1 as $val) {
-		if ($val === 'current-menu-item') {
-		$classes[] = 'active';
-		break;
-		}
-		}
+		$classes[]   = 'nav-item';
+		$classes[]   = ($item->current === true) ? 'active' : '';
+
 
 		// функция join превращает массив в строку
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
@@ -68,21 +63,21 @@ class WalkerMainMenu extends Walker_Nav_Menu {
 		/*
 		* Генерируем элемент меню
 		*/
-		$output .= $indent . '<li' . $value . $class_names .'>';
+		$output .= $indent . '<li' . $class_names . '>';
 
 		// атрибуты элемента, title="", rel="", target="" и href=""
-		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) . '"' : '';
+		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) . '"' : '';
+		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
+		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
 
 		// ссылка и околоссылочный текст
 		$item_output = $args->before;
-		$item_output .= '<a class="nav-link"' . $attributes .'>';
+		$item_output .= '<a class="nav-link"' . $attributes . '>';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-		}
-		}
+	}
+}
