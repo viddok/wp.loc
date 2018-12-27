@@ -44,7 +44,7 @@ function add_my_scripts(){
 
 	wp_enqueue_script(
 		'bootstrap.bundle.min',
-		get_stylesheet_directory_uri() . 'vendor/bootstrap/js/bootstrap.bundle.min.js',
+		get_stylesheet_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js',
 		false,
 		null,
 		true);
