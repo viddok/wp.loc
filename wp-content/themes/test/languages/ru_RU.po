@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: test-translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-28 04:01+0000\n"
-"PO-Revision-Date: 2018-12-28 04:04+0000\n"
+"POT-Creation-Date: 2018-12-28 06:25+0000\n"
+"PO-Revision-Date: 2018-12-28 06:26+0000\n"
 "Last-Translator: Евгений Родкин <djalximik@gmail.com>\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -15,13 +15,13 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.0.2"
 
-#: index.php:29 comments.php:75 single.php:53
-msgid "Older"
-msgstr "Старее"
-
-#: index.php:42 comments.php:76 single.php:60
+#: index.php:27 comments.php:77 single.php:60
 msgid "Newer"
 msgstr "Новее"
+
+#: index.php:40 comments.php:76 single.php:53
+msgid "Older"
+msgstr "Старее"
 
 #: content.php:19 single.php:25
 msgid "Posted on"
@@ -35,31 +35,31 @@ msgstr "Автором"
 msgid "You are logged in as"
 msgstr "Вы вошли как"
 
-#: comments.php:17
+#: comments.php:18
 msgid "Sign out of this account"
 msgstr "Выйти из аккаунта"
 
-#: comments.php:18
+#: comments.php:19
 msgid "Sign out"
 msgstr "Выйти"
 
-#: comments.php:21 comments.php:36
+#: comments.php:22 comments.php:37
 msgid "Add comment"
 msgstr "Добавить комментарий"
 
-#: comments.php:25 comments.php:53
+#: comments.php:26 comments.php:54
 msgid "Comment text (required)"
 msgstr "Текст комментария (обязательно)"
 
-#: comments.php:29 comments.php:57
+#: comments.php:30 comments.php:58
 msgid "Add"
 msgstr "Добавить"
 
-#: comments.php:45
+#: comments.php:46
 msgid "Name (required)"
 msgstr "Имя (обязательно)"
 
-#: comments.php:49
+#: comments.php:50
 msgid "Email (required)"
 msgstr "Email (обязательно)"
 
@@ -75,21 +75,41 @@ msgstr "Искать на сайте..."
 msgid "Go!"
 msgstr "Искать"
 
-#: functions.php:76
+#: functions.php:77
 msgid "Main menu"
 msgstr "Главное меню"
 
-#: functions.php:92
+#: functions.php:93
 msgid "Side column"
 msgstr "Боковая колонка"
 
-#: functions.php:93
+#: functions.php:94
 msgid "Drag widgets here to add them to the sidebar."
 msgstr "Перетащите сюда виджеты, чтобы добавить их в сайдбар."
 
-#: functions.php:141
+#: functions.php:143
 msgid "Read More"
 msgstr "Читать далее"
+
+#: 404.php:11
+msgid "Attention! Page not found."
+msgstr "Внимание! Страница не найдена."
+
+#: 404.php:13
+msgid "Hello. You have reached this page for one of these reasons"
+msgstr "Здравствуйте. Вы попали на эту страницу в одной из этих причин"
+
+#: 404.php:15 404.php:16
+msgid "Reason"
+msgstr "Причина"
+
+#: 404.php:18
+msgid "Some links"
+msgstr "Некоторые ссылки"
+
+#: 404.php:20
+msgid "Home"
+msgstr "На главную"
 
 #. Name of the theme
 msgid "Тестовая тема"

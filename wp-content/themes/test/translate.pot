@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: test-translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-28 04:01+0000\n"
+"POT-Creation-Date: 2018-12-28 06:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,12 +15,12 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.0.2"
 
-#: index.php:29 comments.php:75 single.php:53
-msgid "Older"
+#: index.php:27 comments.php:77 single.php:60
+msgid "Newer"
 msgstr ""
 
-#: index.php:42 comments.php:76 single.php:60
-msgid "Newer"
+#: index.php:40 comments.php:76 single.php:53
+msgid "Older"
 msgstr ""
 
 #: content.php:19 single.php:25
@@ -35,31 +35,31 @@ msgstr ""
 msgid "You are logged in as"
 msgstr ""
 
-#: comments.php:17
+#: comments.php:18
 msgid "Sign out of this account"
 msgstr ""
 
-#: comments.php:18
+#: comments.php:19
 msgid "Sign out"
 msgstr ""
 
-#: comments.php:21 comments.php:36
+#: comments.php:22 comments.php:37
 msgid "Add comment"
 msgstr ""
 
-#: comments.php:25 comments.php:53
+#: comments.php:26 comments.php:54
 msgid "Comment text (required)"
 msgstr ""
 
-#: comments.php:29 comments.php:57
+#: comments.php:30 comments.php:58
 msgid "Add"
 msgstr ""
 
-#: comments.php:45
+#: comments.php:46
 msgid "Name (required)"
 msgstr ""
 
-#: comments.php:49
+#: comments.php:50
 msgid "Email (required)"
 msgstr ""
 
@@ -75,20 +75,40 @@ msgstr ""
 msgid "Go!"
 msgstr ""
 
-#: functions.php:76
+#: functions.php:77
 msgid "Main menu"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:93
 msgid "Side column"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:94
 msgid "Drag widgets here to add them to the sidebar."
 msgstr ""
 
-#: functions.php:141
+#: functions.php:143
 msgid "Read More"
+msgstr ""
+
+#: 404.php:11
+msgid "Attention! Page not found."
+msgstr ""
+
+#: 404.php:13
+msgid "Hello. You have reached this page for one of these reasons"
+msgstr ""
+
+#: 404.php:15 404.php:16
+msgid "Reason"
+msgstr ""
+
+#: 404.php:18
+msgid "Some links"
+msgstr ""
+
+#: 404.php:20
+msgid "Home"
 msgstr ""
 
 #. Name of the theme
