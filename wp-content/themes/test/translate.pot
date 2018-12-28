@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: test-translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-26 05:29+0000\n"
+"POT-Creation-Date: 2018-12-28 04:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,11 +15,11 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.0.2"
 
-#: index.php:29 single.php:53
+#: index.php:29 comments.php:75 single.php:53
 msgid "Older"
 msgstr ""
 
-#: index.php:42 single.php:60
+#: index.php:42 comments.php:76 single.php:60
 msgid "Newer"
 msgstr ""
 
@@ -31,15 +31,47 @@ msgstr ""
 msgid "by"
 msgstr ""
 
+#: comments.php:9
+msgid "You are logged in as"
+msgstr ""
+
+#: comments.php:17
+msgid "Sign out of this account"
+msgstr ""
+
+#: comments.php:18
+msgid "Sign out"
+msgstr ""
+
+#: comments.php:21 comments.php:36
+msgid "Add comment"
+msgstr ""
+
+#: comments.php:25 comments.php:53
+msgid "Comment text (required)"
+msgstr ""
+
+#: comments.php:29 comments.php:57
+msgid "Add"
+msgstr ""
+
+#: comments.php:45
+msgid "Name (required)"
+msgstr ""
+
+#: comments.php:49
+msgid "Email (required)"
+msgstr ""
+
 #: searchform.php:3
 msgid "Search"
 msgstr ""
 
-#: searchform.php:8
+#: searchform.php:9
 msgid "Search for ..."
 msgstr ""
 
-#: searchform.php:10
+#: searchform.php:12
 msgid "Go!"
 msgstr ""
 
