@@ -43,8 +43,8 @@ class WalkerMainMenu extends Walker_Nav_Menu {
 		/*
 		* Генерируем строку с CSS-классами элемента меню
 		*/
-		$classes[]   = 'nav-item';
-		$classes[]   = ($item->current === true) ? 'active' : '';
+		$classes[] = 'nav-item';
+		$classes[] = ( $item->current === true ) ? 'active' : '';
 
 
 		// функция join превращает массив в строку

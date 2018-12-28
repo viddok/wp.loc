@@ -15,10 +15,10 @@
 		<?php the_content() ?>
     </div>
     <div class="card-footer text-muted">
-        <?php
-        $posted = __( 'Posted on', 'translate') . ': ' . get_the_date( 'l, F j, Y' ) . ' ' .
-                  __( 'by', 'translate') . ' ' . get_the_author_posts_link();
-        echo $posted;
-        ?>
+		<?php
+		$posted = __( 'Posted on', 'translate' ) . ': ' . get_the_date( 'l, F j, Y' ) . ' ' .
+		          __( 'by', 'translate' ) . ' ' . get_the_author_posts_link();
+		echo $posted;
+		?>
     </div>
 </div>
