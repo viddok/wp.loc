@@ -45,7 +45,7 @@ $wp_file_descriptions = array(
 	// Embeds
 	'embed.php'             => __( 'Embed Template' ),
 	'embed-404.php'         => __( 'Embed 404 Template' ),
-	'embed-content.php'     => __( 'Embed Content Template' ),
+	'embed-content-posts.php'     => __( 'Embed Content Template' ),
 	'header-embed.php'      => __( 'Embed Header Template' ),
 	'footer-embed.php'      => __( 'Embed Footer Template' ),
 	// Stylesheets
