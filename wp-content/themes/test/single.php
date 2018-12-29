@@ -8,30 +8,12 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
-            <h1 class="my-4"><?php the_title() ?></h1>
-
-			<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
-
-                <!-- Blog Post -->
-                <div class="card mb-4">
-					<?php if ( has_post_thumbnail() ) :
-						$attr = array(
-							'class' => 'card-img-top'
-						);
-						the_post_thumbnail( 'large', $attr );
-					endif; ?>
-                    <div class="card-footer text-muted">
-						<?php
-						$posted = __( 'Posted on', 'translate' ) . ' ' . get_the_date( 'F j, Y' ) . ' ' .
-						          __( 'by', 'translate' ) . ' ' . get_the_author_posts_link();
-						echo $posted;
-						?>
-                    </div>
-                    <div class="card-body">
-						<?php the_content(); ?>
-                    </div>
-                </div>
-			<?php endwhile; endif; ?>
+			<?php if ( have_posts() ):
+                while ( have_posts() ):
+                    the_post();
+                    get_template_part('template-parts/content/content', 'single');
+			    endwhile;
+            endif; ?>
 
             <div class="author-container">
                 <div class="author-data-container">
