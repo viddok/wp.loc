@@ -65,42 +65,14 @@
 	endif;
 	?>
 
-    <!--  Вывод комментариев  -->
-	<?php wp_list_comments() ?>
-    <!--  /Вывод комментариев  -->
+    <?php
+    // Вывод комментариев
+    wp_list_comments();
 
-	<?php if ( $post->comment_count > 0 ) : ?>
-
-        <!-- Pagination comments -->
-		<?php
-		$button_older = '&larr; ' . __( 'Older', 'translate' );
-		$button_next  = __( 'Newer', 'translate' ) . ' &rarr;';
-		?>
-        <ul class="pagination justify-content-center mb-4">
-			<?php if ( ! empty( get_next_comments_link() ) ) : ?>
-                <li class="page-item">
-					<?php echo apply_filters( 'add_class_from_link', get_next_comments_link( $button_older ) ) ?>
-                </li>
-			<?php else: ?>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">
-						<?php echo $button_older ?>
-                    </a>
-                </li>
-			<?php endif; ?>
-			<?php if ( ! empty( get_previous_comments_link() ) ) : ?>
-                <li class="page-item">
-					<?php echo apply_filters( 'add_class_from_link', get_previous_comments_link( $button_next ) ) ?>
-                </li>
-			<?php else: ?>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">
-						<?php echo $button_next ?>
-                    </a>
-                </li>
-			<?php endif; ?>
-        </ul>
-        <!--/Pagination comments-->
-	<?php endif ?>
+    // Пагинация комментариев
+    if ( $post->comment_count > 0 ) :
+	    get_template_part('template-parts/pagination/pagination', 'comments');
+	endif
+    ?>
 </ol>
 
