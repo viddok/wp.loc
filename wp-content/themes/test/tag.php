@@ -19,7 +19,9 @@
 					<?php if ( $tag_desc = tag_description() ) : ?>
 						<?php echo $tag_desc; ?>
 					<?php else: ?>
-                        Вывод всех материалов для метки <strong><?php single_term_title( '', true ) ?></strong>.
+                        <?php
+                        echo __( 'Displays all materials for the tag', 'translate' ) . ': <strong>' . single_term_title('', false) . '</strong>.';
+                        ?>
 					<?php endif; ?>
                 </div>
 
