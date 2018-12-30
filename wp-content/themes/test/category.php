@@ -10,8 +10,8 @@
 
 				<h1 class="my-4">
 					<?php
-					$category_prefix = __( 'Category' ) . ': ';
-					single_cat_title($category_prefix, true);
+					$category_prefix = __( 'Category', 'translate' ) . ': ';
+					single_term_title($category_prefix, true);
 					?>
 				</h1>
 
