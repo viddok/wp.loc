@@ -9,9 +9,7 @@
 			<div class="col-md-8">
 
 				<h1 class="my-4">
-					<?php
-					echo __('Author', 'translate') . ': ' . get_the_author_meta( 'display_name', $_GET['author'] );
-					?>
+					<?php echo __('Author', 'translate') . ': ' . get_the_author_meta( 'display_name'); ?>
 				</h1>
 
 				<?php
