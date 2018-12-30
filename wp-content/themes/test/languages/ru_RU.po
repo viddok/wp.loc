@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: test-translate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-28 06:25+0000\n"
-"PO-Revision-Date: 2018-12-28 06:26+0000\n"
+"POT-Creation-Date: 2018-12-30 22:13+0000\n"
+"PO-Revision-Date: 2018-12-30 22:14+0000\n"
 "Last-Translator: Евгений Родкин <djalximik@gmail.com>\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -15,53 +15,13 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.0.2"
 
-#: index.php:27 comments.php:77 single.php:60
-msgid "Newer"
-msgstr "Новее"
+#: tag.php:13
+msgid "Tag"
+msgstr "Метка"
 
-#: index.php:40 comments.php:76 single.php:53
-msgid "Older"
-msgstr "Старее"
-
-#: content.php:19 single.php:25
-msgid "Posted on"
-msgstr "Опубликовано"
-
-#: content.php:20 single.php:26
-msgid "by"
-msgstr "Автором"
-
-#: comments.php:9
-msgid "You are logged in as"
-msgstr "Вы вошли как"
-
-#: comments.php:18
-msgid "Sign out of this account"
-msgstr "Выйти из аккаунта"
-
-#: comments.php:19
-msgid "Sign out"
-msgstr "Выйти"
-
-#: comments.php:22 comments.php:37
-msgid "Add comment"
-msgstr "Добавить комментарий"
-
-#: comments.php:26 comments.php:54
-msgid "Comment text (required)"
-msgstr "Текст комментария (обязательно)"
-
-#: comments.php:30 comments.php:58
-msgid "Add"
-msgstr "Добавить"
-
-#: comments.php:46
-msgid "Name (required)"
-msgstr "Имя (обязательно)"
-
-#: comments.php:50
-msgid "Email (required)"
-msgstr "Email (обязательно)"
+#: tag.php:23
+msgid "Displays all materials for the tag"
+msgstr "Вывод всех материалов для метки"
 
 #: searchform.php:3
 msgid "Search"
@@ -74,6 +34,10 @@ msgstr "Искать на сайте..."
 #: searchform.php:12
 msgid "Go!"
 msgstr "Искать"
+
+#: category.php:13
+msgid "Category"
+msgstr "Категория"
 
 #: functions.php:77
 msgid "Main menu"
@@ -90,6 +54,10 @@ msgstr "Перетащите сюда виджеты, чтобы добавит�
 #: functions.php:143
 msgid "Read More"
 msgstr "Читать далее"
+
+#: author.php:12
+msgid "Author"
+msgstr "Автор"
 
 #: 404.php:11
 msgid "Attention! Page not found."
@@ -111,18 +79,75 @@ msgstr "Некоторые ссылки"
 msgid "Home"
 msgstr "На главную"
 
+#: template-parts/pagination/pagination-posts.php:3
+#: template-parts/pagination/pagination-comments.php:3
+#: template-parts/pagination/pagination-single.php:11
+msgid "Newer"
+msgstr "Новее"
+
+#: template-parts/pagination/pagination-posts.php:16
+#: template-parts/pagination/pagination-comments.php:2
+#: template-parts/pagination/pagination-single.php:4
+msgid "Older"
+msgstr "Старее"
+
+#: template-parts/content/content-posts.php:19
+#: template-parts/content/content-single.php:13
+msgid "Posted on"
+msgstr "Опубликовано"
+
+#: template-parts/content/content-posts.php:20
+#: template-parts/content/content-single.php:14
+msgid "by"
+msgstr "Автором"
+
+#: template-parts/forms/form-comment.php:5
+msgid "You are logged in as"
+msgstr "Вы вошли как"
+
+#: template-parts/forms/form-comment.php:14
+msgid "Sign out of this account"
+msgstr "Выйти из аккаунта"
+
+#: template-parts/forms/form-comment.php:15
+msgid "Sign out"
+msgstr "Выйти"
+
+#: template-parts/forms/form-comment.php:18
+#: template-parts/forms/form-comment.php:33
+msgid "Add comment"
+msgstr "Добавить комментарий"
+
+#: template-parts/forms/form-comment.php:22
+#: template-parts/forms/form-comment.php:50
+msgid "Comment text (required)"
+msgstr "Текст комментария (обязательно)"
+
+#: template-parts/forms/form-comment.php:26
+#: template-parts/forms/form-comment.php:54
+msgid "Add"
+msgstr "Добавить"
+
+#: template-parts/forms/form-comment.php:42
+msgid "Name (required)"
+msgstr "Имя (обязательно)"
+
+#: template-parts/forms/form-comment.php:46
+msgid "Email (required)"
+msgstr "Email (обязательно)"
+
 #. Name of the theme
 msgid "Тестовая тема"
-msgstr ""
+msgstr "Тестовая тема"
 
 #. Description of the theme
 msgid "Тема для тренировок"
-msgstr ""
+msgstr "Тема для тренировок"
 
 #. Author of the theme
 msgid "Евгений Родкин"
-msgstr ""
+msgstr "Евгений Родкин"
 
 #. Author URI of the theme
 msgid "http://wp.loc"
-msgstr ""
+msgstr "http://wp.loc"
