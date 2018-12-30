@@ -1,47 +1,49 @@
 <?php get_header() ?>
 
-	<!-- Page Content -->
-	<div class="container">
+    <!-- Page Content -->
+    <div class="container">
 
-		<div class="row">
+        <div class="row">
 
-			<!-- Blog Entries Column -->
-			<div class="col-md-8">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
 
-				<h1 class="my-4">
+                <h1 class="my-4">
 					<?php
 					$tag_prefix = __( 'Tag', 'translate' ) . ': ';
-					single_term_title($tag_prefix, true);
+					single_term_title( $tag_prefix, true );
 					?>
-				</h1>
+                </h1>
 
-				<?php if ($tag_desc = tag_description()) : ?>
-					<div style="width: 100%; margin-bottom: 1.5em; padding: 0 2em; color: grey; text-align: justify;">
+                <div style="width: 100%; margin-bottom: 1.5em; padding: 0 2em; color: grey; text-align: justify;">
+					<?php if ( $tag_desc = tag_description() ) : ?>
 						<?php echo $tag_desc; ?>
-					</div>
-				<?php endif; ?>
+					<?php else: ?>
+                        Вывод всех материалов для метки <strong><?php single_term_title( '', true ) ?></strong>.
+					<?php endif; ?>
+                </div>
 
 				<?php
 
 				if ( have_posts() ):
 					while ( have_posts() ):
 						the_post();
-						get_template_part('template-parts/content/content', 'posts');
+						get_template_part( 'template-parts/content/content', 'posts' );
 					endwhile;
 				endif;
 
-				get_template_part('template-parts/pagination/pagination', 'posts');
+				get_template_part( 'template-parts/pagination/pagination', 'posts' );
 
 				?>
 
-			</div>
+            </div>
 
 			<?php get_sidebar() ?>
 
-		</div>
-		<!-- /.row -->
+        </div>
+        <!-- /.row -->
 
-	</div>
-	<!-- /.container -->
+    </div>
+    <!-- /.container -->
 
 <?php get_footer() ?>
