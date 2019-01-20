@@ -22,6 +22,12 @@ function add_my_scripts() {
 		null );
 
 	wp_enqueue_style(
+		'google-maps',
+		get_stylesheet_directory_uri() . '/css/google-maps.css',
+		false,
+		null );
+
+	wp_enqueue_style(
 		'style',
 		get_stylesheet_directory_uri() . '/style.css',
 		false,
@@ -45,6 +51,20 @@ function add_my_scripts() {
 	wp_enqueue_script(
 		'bootstrap.bundle.min',
 		get_stylesheet_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js',
+		false,
+		null,
+		true );
+
+	wp_enqueue_script(
+		'google-maps-link',
+		'https://maps.googleapis.com/maps/api/js?key=AIzaSyC5AS9L080hB1Q82PDTlWp2t-6owcKQNS8',
+		false,
+		null,
+		true );
+
+	wp_enqueue_script(
+		'google-maps',
+		get_stylesheet_directory_uri() . '/scripts/google-maps.js',
 		false,
 		null,
 		true );
@@ -152,3 +172,13 @@ add_filter( 'add_class_from_link', 'add_class_from_link_function' );
 
 /** Подключил класс Walkera главного меню */
 require_once 'WalkerMainMenu.php';
+
+function my_acf_google_map_api( $api ){
+
+	$api['key'] = 'AIzaSyC5AS9L080hB1Q82PDTlWp2t-6owcKQNS8';
+
+	return $api;
+
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
